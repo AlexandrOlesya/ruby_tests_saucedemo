@@ -16,7 +16,7 @@ git pull
 git checkout -b new_branch_name
 git add .
 git commit -m "Comment"
-git push -u origin new_branch_name
+git push --set-upstream origin new_branch_name
 
 git checkout main
 git pull
