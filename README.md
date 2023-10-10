@@ -8,6 +8,9 @@ rspec name_file.rb
 To run a specific test:
 rspec name_file.rb:(line number)
 
+To save logs in json format :
+rspec name --format json  > results.json
+
 
 Git flow:
 
@@ -20,6 +23,11 @@ git push --set-upstream origin new_branch_name
 
 git checkout main
 git pull
+
+For UI github:
+
+create pull requests
+add me for review
 
 For debugging
 
