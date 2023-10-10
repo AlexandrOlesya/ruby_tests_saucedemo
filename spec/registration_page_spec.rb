@@ -13,7 +13,7 @@ RSpec.describe 'Registration saucdemo' do
     password = scenario.password_for_registration_portal
     standart_login = scenario.login_for_registration_portal 1
 
-    scenario.input_login standart_login_1
+    scenario.input_login standart_login
     scenario.input_password password
 
     scenario.autorization_portal
