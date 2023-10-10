@@ -17,6 +17,9 @@ Git flow:
 git branch //make sure you're in the main
 git pull
 git checkout -b new_branch_name
+
+Add change for project
+
 git add .
 git commit -m "Comment"
 git push --set-upstream origin new_branch_name
@@ -28,6 +31,11 @@ For UI github:
 
 create pull requests
 add me for review
+
+after rewiev:
+
+merge
+delete branch
 
 For debugging
 
