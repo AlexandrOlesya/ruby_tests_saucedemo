@@ -5,6 +5,14 @@ jobs:
   check-bats-version:
     runs-on: windows-latest
     steps:
-      - run: bundle install
-      - run: rubocop -a
-      - run: rspec spec
+      - uses: actions/checkout@v2
+  
+      - uses: ruby/setup-ruby@v1
+        with:
+          # Не нужно при наличии файла.ruby-version
+          ruby-version: 3.2
+          # запускает 'bundle install' и автоматически кеширует установленные гемы
+          bundler-cache: true
+  
+      # запуск RSpec-тестов
+      - run: bundle exec rspec
