@@ -18,7 +18,7 @@ RSpec.describe 'Registration_saucdemo' do
     scenario.input_login standart_login
     scenario.input_password password
 
-    scenario.autorization_portal
+                    scenario.autorization_portal
   end
 
   it 'does something problem_user' do
