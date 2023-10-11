@@ -5,3 +5,6 @@ require:
 
 RSpec/ExampleLength:
   Max: 30
+
+Layout/EndOfLine:
+  Enabled: false
