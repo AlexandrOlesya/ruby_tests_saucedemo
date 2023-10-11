@@ -1,13 +1,22 @@
-name: learn-github-actions
-run-name: ${{ github.actor }} is learning GitHub Actions
+name: github-actions
 on: [push]
 jobs:
-  check-bats-version:
+  check-pr-version:
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v2
+  
+      - uses: ruby/setup-ruby@v1
+
         with:
-          node-version: '14'
-      - run: npm install -g bats
-      - run: bats -v
+          # Не нужно при наличии файла.ruby-version
+          ruby-version: 3.2
+          # запускает 'bundle install' и автоматически кеширует установленные гемы
+          bundler-cache: true
+  
+      # запуск RSpec-тестов
+      - run: bundle exec rspec
+      
+      # запуск рубокопа
+      - name: Run RuboCop
+        run: bundle exec rubocop
