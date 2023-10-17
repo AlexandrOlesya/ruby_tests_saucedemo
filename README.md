@@ -20,12 +20,15 @@ git checkout -b new_branch_name
 
 Add change for project
 
+rubocop -A check sintax
+
 git add .
 git commit -m "Comment"
 git push --set-upstream origin new_branch_name
 
 git checkout main
 git pull
+
 
 For UI github:
 
@@ -35,7 +38,7 @@ add me for review
 after rewiev:
 
 merge
-delete branch
+git branch -D neme-branch  "delete branch" 
 
 For debugging
 
