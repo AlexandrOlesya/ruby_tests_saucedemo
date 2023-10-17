@@ -45,3 +45,4 @@ RSpec.describe 'Registration_saucdemo' do
     scenario.autorization_portal
   end
 end
+
