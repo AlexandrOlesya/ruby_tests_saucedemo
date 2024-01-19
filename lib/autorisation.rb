@@ -3,7 +3,7 @@
 require 'page-object'
 
 # page for registration on portal
-class Registration
+class Autorisation
   include PageObject
 
   page_url 'https://www.saucedemo.com/'
