@@ -11,3 +11,9 @@
 # AllowedMethods: refine
 Metrics/BlockLength:
   Max: 100
+
+Metrics/MethodLength:
+  Max: 15
+
+Layout/LineLength:
+  Max: 130
