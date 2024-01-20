@@ -19,6 +19,8 @@ RSpec.describe 'Registration_saucdemo' do
     scenario.input_password password
 
     scenario.autorization_portal
+
+    expect(scenario.check_shopping_cart_visible).to be(true)
   end
 
   it 'does something problem_user' do
@@ -31,6 +33,8 @@ RSpec.describe 'Registration_saucdemo' do
     scenario.input_password password
 
     scenario.autorization_portal
+
+    expect(scenario.check_shopping_cart_visible).to be(true)
   end
 
   it 'does something performance_glitch_user' do
@@ -43,5 +47,7 @@ RSpec.describe 'Registration_saucdemo' do
     scenario.input_password password
 
     scenario.autorization_portal
+
+    expect(scenario.check_shopping_cart_visible).to be(true)
   end
 end
