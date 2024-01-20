@@ -13,6 +13,7 @@ class Autorisation
   text_field(:set_login, xpath: "//input[@data-test = 'username']")
   text_field(:set_password, xpath: "//input[@data-test = 'password']")
   button(:login_button, xpath: "//input[@data-test = 'login-button']")
+  element(:shopping_cart, xpath: "//div[@class = 'shopping_cart_container']")
 
 
   def password_for_registration_portal
@@ -34,5 +35,9 @@ class Autorisation
   def autorization_portal
     wait_until { login_button_element.present? }
     login_button_element.click
+  end
+
+  def check_shopping_cart_visible
+    shopping_cart_element.present?
   end
 end
