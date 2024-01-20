@@ -15,7 +15,6 @@ class Autorisation
   button(:login_button, xpath: "//input[@data-test = 'login-button']")
   element(:shopping_cart, xpath: "//div[@class = 'shopping_cart_container']")
 
-
   def password_for_registration_portal
     password_element.text.split(":\n")[1]
   end
