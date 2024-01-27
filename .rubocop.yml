@@ -8,3 +8,6 @@ RSpec/ExampleLength:
 
 Layout/EndOfLine:
   Enabled: false
+
+Metrics/AbcSize:
+  Enabled: false
