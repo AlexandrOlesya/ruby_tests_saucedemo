@@ -50,6 +50,7 @@ RSpec.describe 'Registration_saucdemo' do
 
     expect(scenario.check_shopping_cart_visible).to be(true)
   end
+
   it 'does something locked_out_user' do
     scenario = Autorisation.new(browser, true)
 
@@ -62,9 +63,6 @@ RSpec.describe 'Registration_saucdemo' do
     scenario.autorization_portal
 
     error_message = scenario.error_message_for_locked_out_user
-    expect(scenario.check_error_message_for_locked_out_user error_message).to be(true)
-
-    
-
+    expect(scenario.check_error_message_for_locked_out_user(error_message)).to be(true)
   end
 end

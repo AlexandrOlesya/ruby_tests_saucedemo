@@ -47,7 +47,7 @@ class Autorisation
   end
 
   def check_error_message_for_locked_out_user(error_message)
-    expected_error_message = "Epic sadface: Sorry, this user has been locked out."
+    expected_error_message = 'Epic sadface: Sorry, this user has been locked out.'
     expected_error_message.eql? error_message
   end
 end
