@@ -14,6 +14,7 @@ class Autorisation
   text_field(:set_password, xpath: "//input[@data-test = 'password']")
   button(:login_button, xpath: "//input[@data-test = 'login-button']")
   element(:shopping_cart, xpath: "//div[@class = 'shopping_cart_container']")
+  element(:error_message, xpath: "//div[@class = 'error-message-container error']")
 
   def password_for_registration_portal
     password_element.text.split(":\n")[1]
@@ -38,5 +39,15 @@ class Autorisation
 
   def check_shopping_cart_visible
     shopping_cart_element.present?
+  end
+
+  def error_message_for_locked_out_user
+    wait_until { error_message_element.present? }
+    error_message_element.text
+  end
+
+  def check_error_message_for_locked_out_user(error_message)
+    expected_error_message = 'Epic sadface: Sorry, this user has been locked out.'
+    expected_error_message.eql? error_message
   end
 end
