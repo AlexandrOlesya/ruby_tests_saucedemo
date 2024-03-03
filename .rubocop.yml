@@ -11,7 +11,4 @@ Layout/EndOfLine:
 
 Metrics/AbcSize:
   Enabled: false
-
-RSpec/InstanceVariable:
-  Exclude:
-    - '**/*_spec.rb'
+  

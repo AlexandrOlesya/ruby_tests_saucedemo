@@ -23,6 +23,10 @@ def take_screenshot(filename)
   @browser.save_screenshot(screenshot_name)
 end
 
+RSpec.shared_context 'browser context' do
+  attr_reader :browser
+end
+
 RSpec.configure do |config|
   config.around(:each) do |example|
     @browser = create_browser(:firefox)
