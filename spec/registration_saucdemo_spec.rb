@@ -3,11 +3,7 @@
 require_relative '../spec_helper'
 
 RSpec.describe 'Registration_saucdemo' do
-  let(:browser) { create_browser :firefox }
-
-  after do
-    browser.quit
-  end
+  include_context 'browser context'
 
   it 'does something standart user' do
     scenario = Autorisation.new(browser, true)

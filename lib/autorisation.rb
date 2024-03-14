@@ -6,8 +6,6 @@ require 'page-object'
 class Autorisation
   include PageObject
 
-  page_url 'https://www.saucedemo.com/'
-
   element(:password, xpath: "//div[@class = 'login_password']")
   element(:login, xpath: "//div[@class = 'login_credentials']")
   text_field(:set_login, xpath: "//input[@data-test = 'username']")
